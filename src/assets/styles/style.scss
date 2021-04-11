@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+$primary-color: #2b6fd6;
+$secondary-color: rgb(226, 0, 68);
+$smooth-black: rgb(31, 31, 31);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: $smooth-black;
+}
+
+.p-2 {
+  padding: 10px;
+}
+
+.font-sans * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.recipe-card h2 {
+  margin-left: 10px;
+}
+
+.title1 {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body.index {
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  background: $primary-color;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px $smooth-black;
+  cursor: pointer;
+}
+
+.mt-2 {
+  margin-top: 10px;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.text,
+p {
+  font-family: 'Merriweather', serif;
+}
+
+.item-img {
+  width: 100%;
+  height: 50vh;
+  background-image: url('../images/pasta.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.recipe-container {
+  box-shadow: 0 -5px 10px #00000065;
+  padding: 10px;
+}
+
+.shadow {
+  box-shadow: 0 0 10px #00000065;
+}
+
+.recipe-title {
+  margin-top: 0;
+}
+
+.recipe-ingredients {
+  background-color: #ececec;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 30rem;
+}
+
+.ingredients-list {
+  padding-left: 20px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.preparation-list {
+  padding-left: 30px;
+
+  li::marker {
+    font-size: 18px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -1px 5px #00000065;
+  background-color: white;
+
+  a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 500;
+
+    &.selected {
+      color: $primary-color;
+    }
+
+    span {
+      font-size: 11px;
+    }
+
+    i {
+      margin-bottom: 2px;
+      font-size: 22px;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      flex-grow: 1;
+      margin: 5px;
+      background-color: white;
+      text-align: center;
+
+      a {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.back-arrow {
+  margin: 10px;
+  position: sticky;
+  top: 10px;
+  font-size: 20px;
+  color: $smooth-black;
+}
+
+.desktop-nav {
+  background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 1px 5px #00000065;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-right: 50px;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 10px;
+
+      &:hover,
+      &.selected {
+        color: white;
+      }
+    }
+  }
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.font-italic {
+  font-family: 'Dancing Script', cursive;
+}
+
+.title2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.main-container {
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.max-w-600 {
+  max-width: 600px;
+  margin: auto;
+}
+
+.recipes-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.recipe-card {
+  background-color: rgb(247, 247, 247);
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 5px;
+
+  &:hover {
+    border-color: $primary-color;
+    text-decoration: underline;
+  }
+
+  img {
+    width: 100%;
+  }
+  color: black;
+}
+
+.index-container {
+  position: fixed;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: none;
+}
+
+.lead {
+  color: $secondary-color;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.title {
+  display: flex;
+  font-size: 10vw;
+  justify-content: center;
+}
+
+.italian-title {
+  font-family: 'Dancing Script', cursive;
+  color: $secondary-color;
+  margin-left: 4vw;
+  text-shadow: 1px 1px 0 $smooth-black;
+}
+
+.food-title {
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.dl-spaced {
+  dd {
+    margin-bottom: 10px;
+  }
+}
+
+.card {
+  border: solid 1px lighten($color: $primary-color, $amount: 25%);
+  position: relative;
+
+  &:hover .card-title {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-content {
+  width: 100%;
+  padding: 10px 10px;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-title {
+  color: black;
+}
+
+.fluid-img {
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+  .mobile-nav,
+  .back-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .recipes-card-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .title {
+    flex-direction: column;
+    font-size: 20vw;
+  }
+
+  .lead {
+    font-size: 1.5em;
+  }
+
+  .card-container {
+    display: flex;
+    overflow: auto;
+    gap: 0;
+    margin: -5px;
+    justify-content: start;
+
+    .card {
+      width: 250px;
+      margin: 5px;
+    }
+  }
+}
